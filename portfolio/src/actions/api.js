@@ -1,6 +1,6 @@
  import axios from "axios";
 
-const baseUrl = 'http://localhost:4000/'
+const baseUrl = process.env.PORT || 'http://localhost:4000/'
  export default {
      postMessage(url=baseUrl+'postMessages/')
      {
