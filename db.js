@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 // Step 2
-mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost:27017/postManagerDB', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false},
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost:27017/postManagerDB', { useNewUrlParser: true, useUnifiedTopology: true },
 err => {
     if(!err)
     console.log('Mongodb connection succeeded.')
