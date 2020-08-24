@@ -24,7 +24,7 @@ app.use('/postMessages',postMessageRoutes)
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static( 'portfolio/build' ))
 
-    app.get('*', (req, res) => {
+    app.get(/^((?!(api)).)*$/, (req, res) => {
     res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html')); //relative path
     });
 }
